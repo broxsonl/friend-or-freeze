@@ -23,7 +23,7 @@
       }
     );
   };
-
+  /*TODO: call createTable at the bottom*/
   City.createTable();
 
   //insert record in cities table for each City
@@ -38,7 +38,7 @@
     );
   };
 
-
+  /*TODO: IF statement to not do the getJSON if (rows.length) wrapped in function */
   $.getJSON('/data/cities.json', function(rawData) {
     rawData.forEach(function(item) {
       var city = new City(item); // Instantiate a city based on item from JSON
@@ -47,6 +47,6 @@
   });
 
 
-
+  module.City = City;
 
 })(window);
