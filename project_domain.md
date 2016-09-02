@@ -37,3 +37,5 @@ We're here to do the work for you of answering the day's important first questio
 - As a developer, I want to ideally create a way for the user to select several different return formats/displays (graphs, stats, etc.) that their resulting data can be displayed in AFTER they are given the binary 'GOOD/BAD' response.
 
 - As a developer, I want to have an attractive results page that is dynamically different depending on the user's result. (e.g. HOT vs COLD/ HEAVEN vs HELL)
+
+- As a developer, I want the site to be a single-page application so that the user may easily do several things while not frequently reloading the assets of the page.
