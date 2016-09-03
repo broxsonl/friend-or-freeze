@@ -1,0 +1,23 @@
+{
+  "name": "friend-or-freeze",
+  "version": "1.0.0",
+  "description": "city mood checker",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/broxsonl/friend-or-freeze.git"
+  },
+  "author": "Lee Broxson, John Schaff, Maelle Vance",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/broxsonl/friend-or-freeze/issues"
+  },
+  "homepage": "https://github.com/broxsonl/friend-or-freeze#readme"
+}
