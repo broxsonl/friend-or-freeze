@@ -8,7 +8,7 @@
 
 
   //this is our request to the server, we need to decide how many tweets we want, right now it's but we can get more easily. We will need to wrap it in a function to be triggered when we get the zipcode and add a call back for the next function we need to call :
-  $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',1km&lang=en&count=50')
+  $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=200')
   .done(function(data, message, xhr) {
     tweetObj.all = data;
   });
