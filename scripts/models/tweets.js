@@ -1,6 +1,6 @@
 (function(module) {
 
-  var tweetOb = {};
+  var tweetObj = {};
   tweetObj.all = [];
 
   tweetObj.lat = 47.67335; //this is just an example. TODO: get lat from webSQL when user input
