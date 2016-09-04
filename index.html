@@ -11,33 +11,31 @@
   <body>
     <header>
 
-
       <nav class="main-nav">
 
       </nav>
     </header>
+
     <main class="clearfix">
-      <section id="homepage" class="tab-content">
+      <section id="homepage" class="page-content">
           <h1> What's it like out there today...?</h1>
-          <h2>Find out what kind of mood to expect from the people in your area today</h2>
+          <h3>Find out what kind of mood to expect from the people in your area today</h3>
           <form>
-            <input type="number" name="zipcode" value="Please enter your Zip Code here!" maxlength="5"  required>
+            <input id="zipentry" type="text" name="zipcode" value="Please enter your Zip Code!" maxlength="5" size="50" required>
             <input type="submit" value="submit">
           </form>
 
+      </section>
 
+      <section id="results" class="page-content">
 
       </section>
 
-      <section id="results" class="tab-content">
+      <section id="results+stats" class="page-content">
 
       </section>
 
-      <section id="results+stats" class="tab-content">
-
-      </section>
-
-      <section id="about" class="tab-content">
+      <section id="about" class="page-content">
 
       </section>
 
@@ -49,14 +47,13 @@
 
     </footer>
 
-
-
 <!-- vendors -->
     <script src="vendor/scripts/jquery-3.1.0.js"></script>
     <script src="vendor/scripts/handlebars.js"></script>
     <script src="vendor/scripts/html5sql.js"></script>
     <script src="vendor/scripts/webdb.js"></script>
     <script src="vendor/scripts/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js"></script>
 
 <!-- models -->
     <script src="scripts/models/city.js"></script>
@@ -64,6 +61,7 @@
     <script src="scripts/models/sentiment_touchstone.json"></script>
 
 <!-- views-->
+    <script src="scripts/views/indexView.js"></script>
 
 <!-- controllers -->
     <script src="scripts/controllers/aboutController.js"></script>
