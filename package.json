@@ -15,10 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/broxsonl/friend-or-freeze.git"
   },
-  "author": "Lee Broxson, John Schaff, Maelle Vance",
+  "author": "Lee Broxson, John Shaff, Maelle Vance",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/broxsonl/friend-or-freeze/issues"
   },
-  "homepage": "https://github.com/broxsonl/friend-or-freeze#readme"
+  "homepage": "https://friend-or-freeze.herokuapp.com"
 }
