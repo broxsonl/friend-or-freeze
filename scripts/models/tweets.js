@@ -1,9 +1,9 @@
 (function(module) {
 
-  // var dictionary = JSON.parse('scripts/models/sentiment_touchstone.json');//Not sure if correct format.
   var tweetObj = {};
   tweetObj.all = [];
   tweetObj.tweetText = [];
+  tweetObj.cleanedTweet = [];
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
@@ -11,54 +11,57 @@
   tweetObj.lat = 47.67335; //this is just an example. TODO: get lat from webSQL when user input
   tweetObj.lng = -122.342621; //TODO: get lng from webSQL
 
+  tweetObj.dictionary = $.getJSON('scripts/models/sentiment_touchstone.json', function(data) {
+    tweetObj.dictionary = data[0];
+    console.log(tweetObj.dictionary = data[0]);
+  });
 
 
   tweetObj.cleanup = function(tweet) {
-    tweet
-    .toLowerCase()
-    .replace(/[.,\/$!%\^\*;:&{}=\-_()`~><+|]/g, '')
-    .replace(/'/g, ' ')
-    .split(' ').filter(function(tw) {
-      return tw.length > 2;
-    });
-    console.log(tweet
+    tweetObj.tweetText.forEach(function(tweet){
+      tweet = tweet
         .toLowerCase()
         .replace(/[.,\/$!%\^\*;:&{}=\-_()`~><+|]/g, '')
         .replace(/'/g, ' ')
-        .split(' '));
-    console.log(tweet);
-    return tweet;
+        .split(' ').filter(function(tw) {
+          return tw.length > 2;
+        });
+      console.log(tweet);
+      tweetObj.scoreTweet(tweet);
+    });
   };
 
   tweetObj.scoreTweet = function(tweet) {
     var score = 0;
-    tweetObj.tweetText.forEach(function(tweet) {
-      tweet = tweetObj.cleanup(tweet);
-      for (var i = 0; i < tweet.length; i++) {
-        if (tweet[i] in dictionary && tweet[i - 1] !== 'not') {
-          score += dictionary[tweet[i]];
-        }
+    for (var i = 0; i < tweet.length; i++) {
+      // console.log(tweetObj.dictionary[0]);
+      if (tweetObj.dictionary.hasOwnProperty(tweet[i])
+      && tweet[i - 1] !== 'not') {
+        console.log(tweet[i]);
+        console.log(tweetObj.dictionary);
+        score += tweetObj.dictionary[tweet[i]];
       }
-      if (!score) {
-        return tweetobj.neutrals += 1;
+    }
+    if (!score) {
+      return tweetObj.neutrals += 1;
+    }
+    else {
+      if (score > 0) {
+        tweetObj.positives += 1;
       }
       else {
-        if (score > 0) {
-          tweetObj.positives += 1;
-        }
-        else {
-          tweetObj.negatives += 1;
-        }
+        tweetObj.negatives += 1;
       }
-    });
+    };
     page('/results');
   };
+
 
   tweetObj.tweetTextCreator = function() {
     tweetObj.all.statuses.forEach(function(tweet) {
       return tweetObj.tweetText.push(tweet.text);
     });
-    tweetObj.scoreTweet();
+    tweetObj.cleanup();
   };
 
 
