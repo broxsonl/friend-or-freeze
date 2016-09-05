@@ -23,9 +23,25 @@
     });
   }
 
-  function analyzeTweet(tweet) {
+  function scoreTweet(tweet) {
     var score = 0;
-    tweet = cleanup(tweet)
+    tweet = cleanup(tweet);
+    for (var i = 0; i < tweet.length; i++) {
+      if (tweet[i] in dictionary && tweet[i - 1] !== 'not') {
+        score += dictionary[tweet[i]];
+      }
+    }
+    if (!score) {
+      return score;
+    }
+    else {
+      if (score > 0) {
+        positives += 1;
+      }
+      else {
+        negatives += 1;
+      }
+    }
   }
 
 
