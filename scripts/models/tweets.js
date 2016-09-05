@@ -51,6 +51,7 @@
         }
       }
     });
+    page('/results');
   };
 
   tweetObj.tweetTextCreator = function() {
