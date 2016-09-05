@@ -29,6 +29,7 @@
       console.log(tweet);
       tweetObj.scoreTweet(tweet);
     });
+    page('/results');
   };
 
   tweetObj.scoreTweet = function(tweet) {
@@ -53,7 +54,6 @@
         tweetObj.negatives += 1;
       }
     };
-    page('/results');
   };
 
 
