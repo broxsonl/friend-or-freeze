@@ -22,9 +22,9 @@
         console.log('Cities table successfully set up.');
       }
     );
+    City.fetchCities();
   };
-  /*TODO: call createTable at the bottom*/
-  City.createTable();
+
 
   //insert record in cities table for each City
   City.prototype.insertRecord = function() {
@@ -38,14 +38,25 @@
     );
   };
 
-  /*TODO: IF statement to not do the getJSON if (rows.length) wrapped in function */
-  // $.getJSON('/data/cities.json', function(rawData) {
-  //   rawData.forEach(function(item) {
-  //     var city = new City(item); // Instantiate a city based on item from JSON
-  //     city.insertRecord(); // Cache the article in DB
-  //   });
-  // });
+  //getting our cities if not already in table
+  City.fetchCities = function() {
+    webDB.execute(
+      'SELECT * FROM cities',
+    function(rows) {
+      if (rows.length) {
+        console.log('already there');
+      }else {
+        $.getJSON('/data/cities.json', function(rawData) {
+          rawData.forEach(function(item) {
+            var city = new City(item); // Instantiate a city based on item from JSON
+            city.insertRecord(); // Cache the article in DB
+          });
+        });
+      }
+    });
+  };
 
+  City.createTable();
 
   module.City = City;
 
