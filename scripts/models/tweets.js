@@ -1,5 +1,6 @@
 (function(module) {
 
+  var dictionary = JSON.parse('scripts/models/sentiment_touchstone.json');//Not sure if correct format.
   var tweetObj = {};
   tweetObj.all = [];
 
@@ -12,6 +13,21 @@
   .done(function(data, message, xhr) {
     tweetObj.all = data;
   });
+
+  function cleanup(tweet) {
+    tweet = tweet
+    .replace(/[.,\/$!%\^\*;:&{}=\-_()`~><+|]/g, '')
+    .replace(/'/g, ' ')
+    .split(' ').filter(function(tw) {
+      return tw.length > 2;
+    });
+  }
+
+  function analyzeTweet(tweet) {
+    var score = 0;
+    tweet = cleanup(tweet)
+  }
+
 
 
 
