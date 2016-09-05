@@ -2,11 +2,14 @@
 
   var tweetObj = {};
   tweetObj.all = [];
+
   var userZipcode = $('#userLocation').val();
 
   tweetObj.lat = 47.67335; //this is just an example. TODO: get lat from webSQL when user input
+
+  //Started. Should be something like this?
   webDB.execute(
-    'SELECT lat FROM cities WHERE zip =' +
+    'SELECT lat FROM cities WHERE zip = ' +
     userZipCode
   );
 
