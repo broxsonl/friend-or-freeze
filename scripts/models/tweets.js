@@ -16,6 +16,7 @@
 
   function cleanup(tweet) {
     tweet = tweet
+    .toLowerCase()
     .replace(/[.,\/$!%\^\*;:&{}=\-_()`~><+|]/g, '')
     .replace(/'/g, ' ')
     .split(' ').filter(function(tw) {
