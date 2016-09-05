@@ -3,6 +3,9 @@
   var dictionary = JSON.parse('scripts/models/sentiment_touchstone.json');//Not sure if correct format.
   var tweetObj = {};
   tweetObj.all = [];
+  tweetObj.positives = 0;
+  tweetObj.negatives = 0;
+  tweetObj.neutrals = 0;
 
   tweetObj.lat = 47.67335; //this is just an example. TODO: get lat from webSQL when user input
   tweetObj.lng = -122.342621; //TODO: get lng from webSQL
@@ -14,6 +17,8 @@
     tweetObj.all = data;
   });
 
+/*we need to get each text property from tweetobj then loop through each tweet*/
+
   function cleanup(tweet) {
     tweet = tweet
     .toLowerCase()
@@ -22,6 +27,7 @@
     .split(' ').filter(function(tw) {
       return tw.length > 2;
     });
+    return tweet;
   }
 
   function scoreTweet(tweet) {
@@ -33,14 +39,14 @@
       }
     }
     if (!score) {
-      return score;
+      return tweetobj.neutrals += 1;
     }
     else {
       if (score > 0) {
-        positives += 1;
+        tweetObj.positives += 1;
       }
       else {
-        negatives += 1;
+        tweetObj.negatives += 1;
       }
     }
   }
