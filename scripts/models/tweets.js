@@ -52,7 +52,8 @@
       else {
         tweetObj.negatives += 1;
       }
-    }
+    };
+    page('/results');
   };
 
 
