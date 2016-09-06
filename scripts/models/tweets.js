@@ -77,10 +77,15 @@
     webDB.execute(
       'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
         function(result) {
-          //TODO:make a check for undefined zipcodes here
-          tweetObj[field] = result[0][field];
-          tweetObj[field2] = result[0][field2];
-          callback();
+          console.log(result);
+          if (result[0]) {
+            tweetObj[field] = result[0][field];
+            tweetObj[field2] = result[0][field2];
+            callback();
+          } else {
+            alert('Sorry, this zipcode is not valid');
+            return $('#zipentry').val('');
+          }
         }
     );
   };
