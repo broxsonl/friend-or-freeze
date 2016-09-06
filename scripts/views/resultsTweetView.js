@@ -1,7 +1,7 @@
 (function(module) {
   var tweetsView = {};
 
-  var tweetCompiler = function(thisTweet) {
+  tweetsView.tweetCompiler = function(thisTweet) {
     var source = $('#tweet-template').html();
     var templateRender = Handlebars.compile(source);
     return templateRender(thisTweet);
@@ -11,5 +11,17 @@
     $('#example-tweets').empty().append(tweetCompiler);
   };
 
+  tweetsView.createEmbeddedTweets = function() {
+    return tweetObj.all().map(function(currentTweet) {
+      return {
+        name: currentAuthor,
+        screen_name: a,
+        text: a,
+        date: a
+      };
+    });
+  };
+
   module.tweetsView = tweetsView;
+  
 })(window);
