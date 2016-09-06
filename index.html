@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
+    <!--TWEET TEMPLATE FOR RESULTS PAGE-->
+    <script id="tweet-template" type="text/x-handlebars-template">
+      <a href="{{source}}">
+        <li>
+          <img id="user-pic" src="{{profile_image_url}}">
+          <h5><a href="https://www.twitter.com/{{screen_name}}"> {{screen_name}}</a></h5>
+          <p id="time-stamp">{{created_at}}</p>
+          <p id="tweet-body">{{text}}</p>
+        </li>
+      </a>
+    </script>
   </head>
   <body>
     <header>
@@ -69,6 +81,7 @@
 
 <!-- views-->
     <script src="scripts/views/indexView.js"></script>
+    <script src="scripts/views/resultsTweetView.js"></script>
 
 <!-- controllers -->
     <script src="scripts/controllers/aboutController.js"></script>
