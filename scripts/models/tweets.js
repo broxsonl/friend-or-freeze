@@ -22,11 +22,8 @@
   tweetObj.scoreTweet = function(tweet) {
     var score = 0;
     for (var i = 0; i < tweet.length; i++) {
-      // console.log(tweetObj.dictionary[0]);
       if (tweetObj.dictionary.hasOwnProperty(tweet[i])
       && tweet[i - 1] !== 'not') {
-        console.log(tweet[i]);
-        console.log(tweetObj.dictionary);
         score += tweetObj.dictionary[tweet[i]];
       }
     }
@@ -54,7 +51,6 @@
         .split(' ').filter(function(tw) {
           return tw.length > 2;
         });
-      console.log(tweet);
       tweetObj.scoreTweet(tweet);
     });
     page('/results');
