@@ -4,7 +4,6 @@
   tweetObj.all = [];
   tweetObj.numOfTweets = $('#rangeinput').val();
   tweetObj.tweetText = [];
-  tweetObj.cleanedTweet = [];
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
@@ -65,7 +64,6 @@
     });
     tweetObj.cleanup();
   };
-
 
 
   //this is our request to the server based on the user choice of zipcode and number of tweets:
