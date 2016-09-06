@@ -6,9 +6,8 @@
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
-
-  tweetObj.lat = 47.67335; //this is just an example. TODO: get lat from webSQL when user input
-  tweetObj.lng = -122.342621; //TODO: get lng from webSQL
+  tweetObj.lat = 0;
+  tweetObj.lng = 0;
 
   tweetObj.dictionary = $.getJSON('scripts/models/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
@@ -84,7 +83,7 @@
         }
       ],
       function(result) {
-        tweetObj[field] = result[0].lat;
+        tweetObj[field] = result[0][field];
       }
     );
   };
