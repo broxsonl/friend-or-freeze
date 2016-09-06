@@ -66,6 +66,7 @@
   tweetObj.fetchTweets = function() {
     $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + tweetObj.numOfTweets)
     .done(function(data, message, xhr) {
+      console.log(xhr);
       tweetObj.all = data;
     }).done(function() {
       tweetObj.tweetTextCreator();
@@ -73,16 +74,15 @@
   };
 
 
-  tweetObj.findCoordinates = function(field, zip) {
+  tweetObj.findCoordinates = function(field, field2, zip, callback) {
     webDB.execute(
-      [
-        {
-          sql: 'SELECT ' + field + ' FROM cities WHERE zip =' + zip + ';'
+      'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
+        function(result) {
+          tweetObj[field] = result[0][field];
+          tweetObj[field2] = result[0][field2];
+          console.log(tweetObj.lat, tweetObj.lng);
+          callback();
         }
-      ],
-      function(result) {
-        tweetObj[field] = result[0][field];
-      }
     );
   };
 
@@ -92,11 +92,7 @@
     event.preventDefault();
     tweetObj.numOfTweets = $('#rangeinput').val();
     tweetObj.zip = $('#zipentry').val();
-    tweetObj.findCoordinates('lat', tweetObj.zip);
-    tweetObj.findCoordinates('lng', tweetObj.zip);
-    console.log(tweetObj.lat, tweetObj.lng);
-    console.log('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + tweetObj.numOfTweets); //the two console logs will return undefined values because of the asynchronous shit.
-    // tweetObj.fetchTweets();
+    tweetObj.findCoordinates('lat', 'lng', tweetObj.zip, tweetObj.fetchTweets);
   });
 
   module.tweetObj = tweetObj;
