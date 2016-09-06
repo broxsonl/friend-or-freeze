@@ -72,7 +72,8 @@
 
   //this is our request to the server, we need to decide how many tweets we want, right now it's 200 but we can get more easily. We will need to wrap it in a function to be triggered when we get the zipcode and add a call back for the next function we need to call :
   tweetObj.fetchTweets = function() {
-    $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=200')
+    var numOfTweets = $('#rangeinput').val();
+    $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + numOfTweets)
     .done(function(data, message, xhr) {
       tweetObj.all = data;
     }).done(function() {
