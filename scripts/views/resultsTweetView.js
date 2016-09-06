@@ -14,7 +14,7 @@
   tweetsView.createEmbeddedTweets = function() {
     return tweetObj.all().map(function(currentTweet) {
       return {
-        name: currentAuthor,
+        name: currentTweet.statuses.,
         screen_name: a,
         text: a,
         date: a
@@ -23,5 +23,5 @@
   };
 
   module.tweetsView = tweetsView;
-  
+
 })(window);
