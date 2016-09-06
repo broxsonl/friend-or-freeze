@@ -7,9 +7,6 @@
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
 
-  tweetObj.lat = 47.67335; //this is just an example. TODO: get lat from webSQL when user input
-  tweetObj.lng = -122.342621; //TODO: get lng from webSQL
-
   tweetObj.dictionary = $.getJSON('scripts/models/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
     console.log(tweetObj.dictionary = data[0]);
@@ -76,16 +73,15 @@
   };
 
 
-  tweetObj.findCoordinates = function(field, zip) {
+  tweetObj.findCoordinates = function(field, field2, zip, callback) {
     webDB.execute(
-      [
-        {
-          sql: 'SELECT ' + field + ' FROM cities WHERE zip =' + zip + ';'
+      'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
+        function(result) {
+          //TODO:make a check for undefined zipcodes here
+          tweetObj[field] = result[0][field];
+          tweetObj[field2] = result[0][field2];
+          callback();
         }
-      ],
-      function(result) {
-        tweetObj[field] = result[0].lat;
-      }
     );
   };
 
@@ -95,9 +91,7 @@
     event.preventDefault();
     tweetObj.numOfTweets = $('#rangeinput').val();
     tweetObj.zip = $('#zipentry').val();
-    tweetObj.findCoordinates('lat', tweetObj.zip);
-    tweetObj.findCoordinates('lng', tweetObj.zip);
-    tweetObj.fetchTweets();
+    tweetObj.findCoordinates('lat', 'lng', tweetObj.zip, tweetObj.fetchTweets);
   });
 
   module.tweetObj = tweetObj;
