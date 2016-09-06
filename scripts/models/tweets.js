@@ -79,8 +79,8 @@
 
   //event handler for user input triggering our tweet analysis
   $('#submit-button').on('click', function (event){
-    event.preventDefault();
     tweetObj.fetchTweets();
+    event.preventDefault();
   });
 
   module.tweetObj = tweetObj;
