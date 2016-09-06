@@ -2,7 +2,6 @@
 
   var tweetObj = {};
   tweetObj.all = [];
-  tweetObj.numOfTweets = $('#rangeinput').val();
   tweetObj.tweetText = [];
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
@@ -77,10 +76,28 @@
   };
 
 
+  tweetObj.findCoordinates = function(field, zip) {
+    webDB.execute(
+      [
+        {
+          sql: 'SELECT ' + field + ' FROM cities WHERE zip =' + zip + ';'
+        }
+      ],
+      function(result) {
+        tweetObj[field] = result[0].lat;
+      }
+    );
+  };
+
+
   //event handler for user input triggering our tweet analysis
   $('#submit-button').on('click', function (event){
-    tweetObj.fetchTweets();
     event.preventDefault();
+    tweetObj.numOfTweets = $('#rangeinput').val();
+    tweetObj.zip = $('#zipentry').val();
+    tweetObj.findCoordinates('lat', tweetObj.zip);
+    tweetObj.findCoordinates('lng', tweetObj.zip);
+    tweetObj.fetchTweets();
   });
 
   module.tweetObj = tweetObj;
