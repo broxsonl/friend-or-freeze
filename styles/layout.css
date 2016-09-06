@@ -5,3 +5,20 @@
 #negative-pic {
   display:none;
 }
+
+#rangeinput {
+  display: block;
+  margin-top: 2em;
+}
+
+#homepage {
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+#slider-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,14 +1,39 @@
+body {
+  background: linear-gradient(to right, #8B9DE4, #004CBF);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+main {
+}
 
+header {
+  display: flex;
+}
 
+header img#logo {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  background: linear-gradient(to bottom right, yellow, #61EFFF);
+}
 
+header .title-name {
+  margin-left: 15px;
+}
 
+label {
+  display: flex;
+  justify-content: center;
 
-
-
-
-
-
+}
+/*
+form {
+  margin-top: 8em;
+  margin-left: auto;
+  margin-right: auto;
+}*/
 
 
 
@@ -40,11 +65,11 @@
     height: 8.4px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(to right, orange, #61EFFF);
+    background: linear-gradient(to right, orange);
     border-radius: 1.3px;
     border: 0.2px solid #010101;
   }
 
   input[type=range]:focus::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, orange, #61EFFF);
+    background: linear-gradient(to right, orange);
   }
