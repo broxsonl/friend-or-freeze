@@ -3,7 +3,6 @@
   var tweetObj = {};
   tweetObj.all = [];
   tweetObj.tweetText = [];
-  tweetObj.cleanedTweet = [];
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
@@ -60,15 +59,12 @@
     };
   };
 
-
   tweetObj.tweetTextCreator = function() {
     tweetObj.all.statuses.forEach(function(tweet) {
       return tweetObj.tweetText.push(tweet.text);
     });
     tweetObj.cleanup();
   };
-
-
 
   //this is our request to the server, we need to decide how many tweets we want, right now it's 200 but we can get more easily. We will need to wrap it in a function to be triggered when we get the zipcode and add a call back for the next function we need to call :
   tweetObj.fetchTweets = function() {
@@ -80,7 +76,6 @@
       tweetObj.tweetTextCreator();
     });
   };
-
 
   module.tweetObj = tweetObj;
 
