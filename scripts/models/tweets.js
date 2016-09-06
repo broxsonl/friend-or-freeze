@@ -66,7 +66,6 @@
   tweetObj.fetchTweets = function() {
     $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + tweetObj.numOfTweets)
     .done(function(data, message, xhr) {
-      console.log(xhr);
       tweetObj.all = data;
     }).done(function() {
       tweetObj.tweetTextCreator();
@@ -78,9 +77,9 @@
     webDB.execute(
       'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
         function(result) {
+          //TODO:make a check for undefined zipcodes here
           tweetObj[field] = result[0][field];
           tweetObj[field2] = result[0][field2];
-          console.log(tweetObj.lat, tweetObj.lng);
           callback();
         }
     );
