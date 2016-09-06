@@ -16,6 +16,10 @@
     console.log(tweetObj.dictionary = data[0]);
   });
 
+  $('#submit-button').on('click', function (event){
+    tweetObj.fetchTweets();
+    event.preventDefault();
+  });
 
   tweetObj.cleanup = function(tweet) {
     tweetObj.tweetText.forEach(function(tweet){

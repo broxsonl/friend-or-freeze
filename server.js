@@ -7,7 +7,7 @@ var requestProxy = require('express-request-proxy'),
 var bearerToken = process.env.TWITTER_BEARER_TOKEN;
 
 var proxyTwitter = function(request, response) {
-  console.log('Routing twitter request for new zip');
+  console.log(bearerToken);
   (requestProxy({
     url: 'https://api.twitter.com/1.1/search/' + request.params[0],
     json: true,
