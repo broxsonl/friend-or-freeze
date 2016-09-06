@@ -6,8 +6,6 @@
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
-  tweetObj.lat = 0;
-  tweetObj.lng = 0;
 
   tweetObj.dictionary = $.getJSON('scripts/models/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
@@ -96,7 +94,9 @@
     tweetObj.zip = $('#zipentry').val();
     tweetObj.findCoordinates('lat', tweetObj.zip);
     tweetObj.findCoordinates('lng', tweetObj.zip);
-    tweetObj.fetchTweets();
+    console.log(tweetObj.lat, tweetObj.lng);
+    console.log('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + tweetObj.numOfTweets); //the two console logs will return undefined values because of the asynchronous shit.
+    // tweetObj.fetchTweets();
   });
 
   module.tweetObj = tweetObj;
