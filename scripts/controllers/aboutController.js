@@ -8,8 +8,9 @@
     $('#about article').hide();
 
     $('#about').on('click', 'h2', function() {
-      console.log(this.className);
-      $('article').find(this.className).show();
+      console.log('class name clicked ' + this.className);
+      $('article').fadeOut();
+      $('.' + this.className  ).fadeIn();
     });
   };
   module.aboutController = aboutController;
