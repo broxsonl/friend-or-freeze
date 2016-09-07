@@ -12,6 +12,9 @@
       $('#negative-pic').fadeIn();
     }
     tweetsView.renderTweets();
+    usersObj.getTweetGeos();
+    chartView.drawChart();
+
   };
   module.resultsController = resultsController;
 

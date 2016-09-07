@@ -4,7 +4,7 @@
   tweetsView.tweetCompiler = function(thisTweet) {
     var source = $('#tweet-template').html();
     var templateRender = Handlebars.compile(source);
-    console.log(templateRender(thisTweet));
+    // console.log(templateRender(thisTweet));
     return templateRender(thisTweet);
   };
 

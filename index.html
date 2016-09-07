@@ -85,6 +85,9 @@
      </main>
      <div class="push"></div>
     </div>
+
+    <canvas id="tweet-chart" width="800px" height="400px"></canvas>
+
     <div class="footer-container">
       <div class="footer-div">
         <p class="links"> About &nbsp &nbsp| &nbsp &nbsp Home </p>
@@ -97,6 +100,11 @@
     <script src="vendor/scripts/html5sql.js"></script>
     <script src="vendor/scripts/webdb.js"></script>
     <script src="vendor/scripts/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript">
+
+    </script>
+
+    <!-- <script src="vendor/scripts/chart.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js"></script>
     <script src="vendor/scripts/sentiment_touchstone.json"></script>
 
@@ -110,6 +118,7 @@
 <!-- views-->
     <script src="scripts/views/indexView.js"></script>
     <script src="scripts/views/resultsTweetView.js"></script>
+    <script src="scripts/views/chartView.js"></script>
 
 <!-- controllers -->
     <script src="scripts/controllers/aboutController.js"></script>

@@ -33,6 +33,7 @@
         tweetObj.negatives += 1;
       }
     };
+    chartStuff();
   };
 
   //our cleanup function, for each tweet in our array of tweets(strings) will put everything to lower case, remove characters we don't need and split strings in individual words. We then filter it so we have only words with more than two letters.
@@ -89,7 +90,6 @@
         }
     );
   };
-
 
   //event handler for user input triggering our tweet analysis
   $('form').on('submit', function (event){
