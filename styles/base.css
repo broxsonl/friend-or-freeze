@@ -18,6 +18,14 @@ h2 {
   font-family: 'Quicksand', sans-serif;
 }
 
+h3 {
+  margin-top: 2%;
+}
+
+#about {
+  text-align: center;
+}
+
 article {
   border: 2px solid black;
   text-align: center;

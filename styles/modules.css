@@ -110,3 +110,11 @@ header .title-name {
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: linear-gradient(to right, orange);
   }
+
+/*media queries:*/
+/*@media only screen and (min-width: 500px) {
+  #about {
+    right: 15%;*/
+    /*left: 20%:*/
+  /*}
+}*/

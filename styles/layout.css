@@ -52,17 +52,20 @@
   color: white;
 }
 
-
 #about {
-  margin-top: 20%;
+  position: absolute;
+  top: 40%;
+  margin-bottom: 25%;
+  width: 100%;
 }
+
+
 #about h2 {
   display: inline;
   margin-right: 2%;
 }
 
 .aboutJohn {
-  margin-left: 7%;
   padding-right: 2%;
   border-right: 2px solid black;
 }
@@ -73,9 +76,10 @@
 }
 
 article {
-  margin-top: 20%;
-  margin-left: 8%;
-  margin-right: 8%;
-  max-width: 80%;
+  position: relative;
+  text-align: center;
+  margin-top: 7%;
+  left: 23%;
+  max-width: 50%;
   border: 2px solid black;
 }
