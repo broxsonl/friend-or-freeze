@@ -1,6 +1,7 @@
 'use strict';
 
-$('#about').on('click', 'h2', function() {
+$('#about').on('click', 'a', function() {
+  event.preventDefault();
   $('#about').css('top', '15%');
   $('article').hide();
   $('.' + this.className).fadeIn();
