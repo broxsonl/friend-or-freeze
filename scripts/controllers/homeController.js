@@ -2,7 +2,6 @@
   var homeController = {};
 
   homeController.reveal = function() {
-
     $('.page-content').hide();
     $('#homepage').fadeIn();
   };
