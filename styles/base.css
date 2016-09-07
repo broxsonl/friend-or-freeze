@@ -14,13 +14,12 @@ label {
 
 
 
-
-
 /*CSS BELOW FOR STYLING THE RANGE INPUT*/
   input[type=range] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
+    width: 45%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
+    align-self: center;
   }
 
   input[type=range]::-webkit-slider-thumb {
