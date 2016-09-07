@@ -11,6 +11,7 @@
       $('#negatives-results').fadeIn();
       $('#negative-pic').fadeIn();
     }
+    tweetsView.renderTweets();
   };
   module.resultsController = resultsController;
 
