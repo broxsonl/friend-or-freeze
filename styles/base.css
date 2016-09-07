@@ -7,24 +7,6 @@ body {
   height: 100%;
 }
 
-
-header {
-  display: flex;
-  margin-top: 3em;
-  margin-left: 3em;
-}
-
-header img#logo {
-  border-radius: 100%;
-  height: 60px;
-  width: 60px;
-  background: linear-gradient(to bottom right, yellow, #61EFFF);
-}
-
-header .title-name {
-  margin-left: 15px;
-}
-
 label {
   display: flex;
   justify-content: center;
@@ -32,13 +14,12 @@ label {
 
 
 
-
-
 /*CSS BELOW FOR STYLING THE RANGE INPUT*/
   input[type=range] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
+    width: 45%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
+    align-self: center;
   }
 
   input[type=range]::-webkit-slider-thumb {
