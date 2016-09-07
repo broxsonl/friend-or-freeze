@@ -1,7 +1,53 @@
+.wrapper {
+  position: relative;
+  min-height: 92%;
+  height: auto !important;
+  margin: 0 auto -50px;
+}
+
 #positive-pic {
   display:none;
 }
 
 #negative-pic {
   display:none;
+}
+
+#rangeinput {
+  display: block;
+  margin-top: 2em;
+}
+
+#homepage {
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+#slider-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*.push {
+  height: 50px;
+}*/
+
+.footer-container {
+  /*position: absolute;
+  bottom: 0;*/
+  position: relative;
+  margin: 0 auto;
+  height: 50px;
+}
+
+.footer-div {
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  color: white;
 }

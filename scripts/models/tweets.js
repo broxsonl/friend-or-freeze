@@ -7,7 +7,7 @@
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
 
-  tweetObj.dictionary = $.getJSON('scripts/models/sentiment_touchstone.json', function(data) {
+  tweetObj.dictionary = $.getJSON('vendor/scripts/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
     console.log(tweetObj.dictionary = data[0]);
   });
@@ -92,7 +92,7 @@
 
 
   //event handler for user input triggering our tweet analysis
-  $('#submit-button').on('click', function (event){
+  $('form').on('submit', function (event){
     event.preventDefault();
     tweetObj.numOfTweets = $('#rangeinput').val();
     tweetObj.zip = $('#zipentry').val();
