@@ -65,12 +65,12 @@
   margin-right: 2%;
 }
 
-.aboutJohn {
+.aboutJohn h2{
   padding-right: 2%;
   border-right: 2px solid black;
 }
 
-.aboutLee {
+.aboutLee h2{
   padding-right: 2%;
   border-right: 2px solid black;
 }
