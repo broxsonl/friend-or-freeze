@@ -9,7 +9,7 @@
 
     $('#about').on('click', 'h2', function() {
       console.log('class name clicked ' + this.className);
-      $('article').fadeOut();
+      $('article').hide();
       $('.' + this.className  ).fadeIn();
     });
   };
