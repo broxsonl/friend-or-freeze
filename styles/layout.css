@@ -51,3 +51,31 @@
   margin-top: 0;
   color: white;
 }
+
+
+#about {
+  margin-top: 20%;
+}
+#about h2 {
+  display: inline;
+  margin-right: 2%;
+}
+
+.aboutJohn {
+  margin-left: 7%;
+  padding-right: 2%;
+  border-right: 2px solid black;
+}
+
+.aboutLee {
+  padding-right: 2%;
+  border-right: 2px solid black;
+}
+
+article {
+  margin-top: 20%;
+  margin-left: 8%;
+  margin-right: 8%;
+  max-width: 80%;
+  border: 2px solid black;
+}

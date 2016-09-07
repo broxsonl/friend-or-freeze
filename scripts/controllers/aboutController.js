@@ -10,7 +10,7 @@
     $('#about').on('click', 'h2', function() {
       console.log('class name clicked ' + this.className);
       $('article').hide();
-      $('.' + this.className  ).fadeIn();
+      $('.' + this.className).fadeIn();
     });
   };
   module.aboutController = aboutController;

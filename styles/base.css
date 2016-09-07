@@ -1,3 +1,9 @@
+/*font-family: 'Titillium Web', sans-serif;
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Marcellus SC', serif;
+font-family: 'Quicksand', sans-serif;*/
+
+
 html {
   height: 100%;
 }
@@ -5,6 +11,7 @@ html {
 body {
   background: linear-gradient(to right, #8B9DE4, #004CBF);
   height: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 
@@ -23,6 +30,7 @@ header img#logo {
 
 header .title-name {
   margin-left: 15px;
+  font-family: 'Marcellus SC', serif;
 }
 
 label {
@@ -70,3 +78,15 @@ label {
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: linear-gradient(to right, orange);
   }
+
+
+/*styling the about section*/
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+article {
+  border: 2px solid black;
+  text-align: center;
+}
