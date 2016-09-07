@@ -21,24 +21,22 @@
   <body>
     <div class="wrapper">
      <header>
-      <img id="logo" src="assets/images/logo.png">
+      <a href="/"><img id="logo" src="assets/images/logo.png"></a>
       <h1 class="title-name">
         <span id="friend">Friend</span> or <span id="freeze">Freeze</span>
       </h1>
-
-      <nav class="main-nav">
-      </nav>
     </header>
 
-     <main class="clearfix">
+     <!-- <main class="clearfix"> -->
       <section id="homepage" class="page-content">
           <form>
-            <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code!" maxlength="5" size="50" required>
-
             <div id="slider-div">
-              <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
               <label for="tweet-amount-slider">Number of Tweets</label>
+              <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value">
+              <output id="rangevalue">25</output>
             </div>
+            <br>
+              <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code" maxlength="5" size="50" required>
           </form>
       </section>
 
@@ -88,7 +86,7 @@
     </div>
     <div class="footer-container">
       <div class="footer-div">
-        <p class="links"> About &nbsp &nbsp| &nbsp &nbsp Home </p>
+        <p class="links"> <a href="/about">About</a> &nbsp &nbsp| &nbsp &nbsp <a href="/">Home</a></p>
       </div>
     </div>
 
