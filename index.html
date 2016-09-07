@@ -16,8 +16,10 @@
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </script>
   </head>
+
   <body>
-    <header>
+    <div class="wrapper">
+     <header>
       <img id="logo" src="assets/images/logo.png">
       <h1 class="title-name">
         <span id="friend">Friend</span> or <span id="freeze">Freeze</span>
@@ -28,7 +30,7 @@
       </nav>
     </header>
 
-    <main class="clearfix">
+     <main class="clearfix">
       <section id="homepage" class="page-content">
           <form>
             <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code!" maxlength="5" size="50" required>
@@ -37,19 +39,15 @@
               <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
               <label for="tweet-amount-slider">Number of Tweets</label>
             </div>
-
           </form>
-
       </section>
 
       <section id="positive-results" class="page-content">
         <img id="positive-pic" src="assets/images/positive.png" height="800px" width="800px">
-
       </section>
 
       <section id="negative-results" class="page-content">
         <img id="negative-pic" src="assets/images/negative.jpg" height="800px" width="800px">
-
       </section>
 
       <section id="results+stats" class="page-content">
@@ -58,14 +56,15 @@
       </section>
 
       <section id="about" class="page-content">
-
       </section>
-
-    </main>
-
-    <footer>
-
-    </footer>
+     </main>
+     <div class="push"></div>
+    </div>
+    <div class="footer-container">
+      <div class="footer-div">
+        <p class="links"> About &nbsp &nbsp| &nbsp &nbsp Home </p>
+      </div>
+    </div>
 
 <!-- vendors -->
     <script src="vendor/scripts/jquery-3.1.0.js"></script>
