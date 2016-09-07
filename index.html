@@ -29,11 +29,14 @@
 
      <!-- <main class="clearfix"> -->
       <section id="homepage" class="page-content">
+        <h1>Find out how friendly your area is today</h1>
+        <br>
+
           <form>
             <div id="slider-div">
-              <label for="tweet-amount-slider">Number of Tweets</label>
-              <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value">
-              <output id="rangevalue">25</output>
+              <label id="slider-text" for="tweet-amount-slider">How many tweets would you like to sample?</label>
+                <output id="rangevalue">25</output>
+              <input id="rangeinput" type="range" min="5" max="100" value="25">
             </div>
             <br>
               <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code" maxlength="5" size="50" required>
@@ -48,9 +51,7 @@
         <img id="negative-pic" src="assets/images/negative.jpg" height="800px" width="800px">
       </section>
 
-      <section id="results+stats" class="">
-        <div id="example-tweets">
-        </div>
+      <section id="example-tweets" class="page-content">
 
       </section>
 
@@ -86,7 +87,7 @@
     </div>
     <div class="footer-container">
       <div class="footer-div">
-        <p class="links"> <a href="/about">About</a> &nbsp &nbsp| &nbsp &nbsp <a href="/">Home</a></p>
+        <p class="links"> <a href="/">Home</a> &nbsp &nbsp| &nbsp &nbsp <a href="/about">About</a></p>
       </div>
     </div>
 

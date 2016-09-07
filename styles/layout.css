@@ -1,5 +1,5 @@
 .wrapper {
-  position: relative;
+  /*position: relative;*/
   min-height: 92%;
   height: auto !important;
   margin: 0 auto -50px;
@@ -19,9 +19,9 @@
 }
 
 #homepage {
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
-  margin-top: 8em;
+  margin-top: 6em;
 }
 
 #slider-div {
@@ -35,8 +35,8 @@
 }*/
 
 .footer-container {
-  /*position: absolute;
-  bottom: 0;*/
+  /*position: absolute;*/
+  /*bottom: 0;*/
   position: relative;
   margin: 0 auto;
   height: 50px;

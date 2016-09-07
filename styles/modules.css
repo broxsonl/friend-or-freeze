@@ -16,6 +16,10 @@ header .title-name {
   font-size: 25px;
 }
 
+#homepage h1 {
+  text-align: center;
+}
+
 #zipentry {
   /*box-sizing: border-box;*/
   width: 90%;
@@ -28,48 +32,23 @@ header .title-name {
   text-align: center;
 }
 
-#rangevalue {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: -10px;
-  font-size: 15px;
+#slider-text {
+  color: white;
 }
-
-.range-over-25 {
-  font-size: 25px;
-  color: pink;
-}
-
-.range-over-35 {
-  font-size: 30px;
-  color: green;
-}
-
-.range-over-50 {
-  font-size: 35px;
-  color: purple;
-}
-
-.range-over-60 {
-  font-size: 40px;
-  color: yellow;
-}
-
-.range-over-75 {
-  font-size: 50px;
-  color: red;
-}
-
-.range-at-100 {
-  font-size: 60px;
-  color: red;
-}
-
 
 .footer-div a {
   text-decoration: none;
   font-weight: bold;
   color: white;
+}
+
+#rangevalue {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
+  margin-bottom: -3px;
 }
 
 
