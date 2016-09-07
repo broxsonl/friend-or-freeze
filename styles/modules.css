@@ -65,11 +65,14 @@ header .title-name {
   color: red;
 }
 
-
 .footer-div a {
   text-decoration: none;
   font-weight: bold;
   color: white;
+}
+
+#rangevalue {
+  color: violet;
 }
 
 
