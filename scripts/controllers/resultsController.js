@@ -14,6 +14,7 @@
     $('#example-tweets').fadeIn();
     tweetsView.renderTweets();
   };
+
   module.resultsController = resultsController;
 
 })(window);
