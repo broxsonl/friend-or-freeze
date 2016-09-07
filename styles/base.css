@@ -1,15 +1,17 @@
-body {
-  background: linear-gradient(to right, #8B9DE4, #004CBF);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+html {
+  height: 100%;
 }
 
-main {
+body {
+  background: linear-gradient(to right, #8B9DE4, #004CBF);
+  height: 100%;
 }
+
 
 header {
   display: flex;
+  margin-top: 3em;
+  margin-left: 3em;
 }
 
 header img#logo {
@@ -26,14 +28,9 @@ header .title-name {
 label {
   display: flex;
   justify-content: center;
-
 }
-/*
-form {
-  margin-top: 8em;
-  margin-left: auto;
-  margin-right: auto;
-}*/
+
+
 
 
 
