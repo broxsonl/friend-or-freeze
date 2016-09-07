@@ -9,11 +9,11 @@
   };
 
   tweetsView.renderTweets = function() {
-    tweetsView.createEmbeddedTweets().forEach(function(tweet){
+    for (var i = 0; i < 5; i++) {
+      tweet = tweetsView.createEmbeddedTweets()[i];
       $('#example-tweets').append(tweetsView.tweetCompiler(tweet));
-    });
+    };
   };
-
   tweetsView.createEmbeddedTweets = function() {
     return tweetObj.all.statuses.map(function(currentTweet) {
       return {

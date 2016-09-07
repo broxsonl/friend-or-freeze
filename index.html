@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Friend or Freeze</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/styles/skeleton.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -24,20 +26,18 @@
       <nav class="main-nav">
 
       </nav>
-
-
     </header>
 
     <main class="clearfix">
       <section id="homepage" class="page-content">
-          <h1> What's it like out there today...?</h1>
-          <h3>Find out what kind of mood to expect from the people in your area today</h3>
           <form>
             <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code!" maxlength="5" size="50" required>
 
-            <label for="tweet-amount-slider">Number of Tweets</label> <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
+            <div id="slider-div">
+              <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
+              <label for="tweet-amount-slider">Number of Tweets</label>
+            </div>
 
-            <input id="submit-button" type="submit" value="submit">
           </form>
 
       </section>
