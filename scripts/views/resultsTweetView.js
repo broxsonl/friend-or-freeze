@@ -9,6 +9,7 @@
   };
 
   tweetsView.renderTweets = function() {
+    $('#example-tweets').empty();
     for (var i = 0; i < 5; i++) {
       tweet = tweetsView.createEmbeddedTweets()[i];
       $('#example-tweets').append(tweetsView.tweetCompiler(tweet));

@@ -4,7 +4,7 @@ var adjustTweetNumber = function() {
   if (parseInt($('#rangeinput').val()) === 100) {
     $('#rangevalue').css({
       'font-size': '75px',
-      'color': 'red'
+      'color': 'maroon'
     });
   }
   else if (parseInt($('#rangeinput').val()) > 75) {
@@ -39,8 +39,8 @@ var adjustTweetNumber = function() {
   }
   else if (parseInt($('#rangeinput').val()) <= 25) {
     $('#rangevalue').css({
-      'font-size': '10',
-      'color': 'violet'
+      'font-size': '15px',
+      'color': 'black'
     });
   }
   $('#rangevalue').text($('#rangeinput').val());
