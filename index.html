@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Friend or Freeze</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/styles/skeleton.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -27,20 +29,18 @@
           <li><a href="/about">About Us</a></li>
         </ul>
       </nav>
-
-
     </header>
 
     <main class="clearfix">
       <section id="homepage" class="page-content">
-          <h1> What's it like out there today...?</h1>
-          <h3>Find out what kind of mood to expect from the people in your area today</h3>
           <form>
             <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code!" maxlength="5" size="50" required>
 
-            <label for="tweet-amount-slider">Number of Tweets</label> <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
+            <div id="slider-div">
+              <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
+              <label for="tweet-amount-slider">Number of Tweets</label>
+            </div>
 
-            <input id="submit-button" type="submit" value="submit">
           </form>
 
       </section>
@@ -61,22 +61,30 @@
       </section>
 
       <section id="about" class="page-content">
-        <h1>Meet our Devs</h1>
+        <h2 class="aboutJohn">John</h2>
+        <h2 class="aboutLee">Lee</h2>
+        <h2 class="maelle">Maelle</h2>
 
-        <img class="devPic" src="http://placehold.it/80x80">
-        <h2>Lee Broxson</h2>
-        <p>Old timey gentleman, Lee is an awesome swing-dancer (not to be confused with swinger).</p>
-        <p>You can find all his cool code stuff on his <a href="http://github.com/broxsonl" target="_blank">GitHub</a></p>
+        <div class="aboutLee">
+          <h3>Lee Broxson</h3>
+          <img class="devPic" src="http://placehold.it/80x80">
+          <p>Old timey gentleman, Lee is an awesome swing-dancer (not to be confused with swinger).</p>
+          <p>You can find all his cool code stuff on his <a href="http://github.com/broxsonl" target="_blank">GitHub</a></p>
+        </div>
 
-        <img class="devPic" src="http://placehold.it/80x80">
-        <h2>John Shaff</h2>
-        <p>In his spare time, John rides bulls. Enough said.</p>
-        <p>You can find his guaranteed 100% bull-free code on his <a href="http://github.com/johnshaff" target="_blank">GitHub</a></p>
+        <div class="aboutJohn">
+          <h3>John Shaff</h3>
+          <img class="devPic" src="http://placehold.it/80x80">
+          <p>In his spare time, John rides bulls. Enough said.</p>
+          <p>You can find his guaranteed 100% bull-free code on his <a href="http://github.com/johnshaff" target="_blank">GitHub</a></p>
+        </div>
 
-        <img class="devPic" src="http://placehold.it/80x80">
-        <h2>Maelle Vance</h2>
-        <p>Mom-in-Chief, Maelle often describes this occupation as "feral cats herder".</p>
-        <p>You can find her latest non-diaper related code on her <a href="http://github.com/ellezv" target="_blank">GitHub</a></p>
+        <div class="aboutMaelle">
+          <img class="devPic" src="http://placehold.it/80x80">
+          <h3>Maelle Vance</h3>
+          <p>Mom-in-Chief, Maelle often describes this occupation as "feral cats herder".</p>
+          <p>You can find her latest non-diaper related code on her <a href="http://github.com/ellezv" target="_blank">GitHub</a></p>
+        </div>
       </section>
 
     </main>

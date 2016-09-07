@@ -92,7 +92,7 @@
 
 
   //event handler for user input triggering our tweet analysis
-  $('#submit-button').on('click', function (event){
+  $('form').on('submit', function (event){
     event.preventDefault();
     tweetObj.numOfTweets = $('#rangeinput').val();
     tweetObj.zip = $('#zipentry').val();
