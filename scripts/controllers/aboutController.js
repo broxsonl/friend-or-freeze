@@ -5,12 +5,11 @@
 
     $('.page-content').hide();
     $('#about').fadeIn();
-    $('div, .aboutLee').hide();
-    $('div, .aboutJohn').hide();
-    $('div, .aboutMaelle').hide();
+    $('#about article').hide();
 
-    $('h2').on('click', function() {
-      $('div', this.className).show();
+    $('#about').on('click', 'h2', function() {
+      console.log(this.className);
+      $('article').find(this.className).show();
     });
   };
   module.aboutController = aboutController;
