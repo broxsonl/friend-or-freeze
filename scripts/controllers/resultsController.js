@@ -8,7 +8,7 @@
       $('#positive-results').fadeIn();
       $('#positive-pic').fadeIn();
     } else {
-      $('#negatives-results').fadeIn();
+      $('#negative-results').fadeIn();
       $('#negative-pic').fadeIn();
     }
     $('#example-tweets').fadeIn();
