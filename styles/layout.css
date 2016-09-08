@@ -1,9 +1,9 @@
-/*.wrapper {*/
-  /*position: relative;*/
-  /*min-height: 92%;
+.wrapper {
+  position: relative;
+  min-height: 92%;
   height: auto !important;
-  margin: 0 auto -50px;*/
-/*}*/
+  margin: 0 auto -50px;
+}
 
 #positive-pic {
   display:none;
@@ -30,11 +30,12 @@
 
 .footer-container {
   position: relative;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   height: 50px;
 }
 
-.footer-div {
+.push {
+  height: 50px;
 }
 
 .links {
@@ -57,7 +58,6 @@
   color: white;
   text-decoration: none;
 }
-
 
 #about h2 {
   display: inline;
