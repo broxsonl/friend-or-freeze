@@ -2,7 +2,7 @@ header {
   display: flex;
   margin-top: .75em;
   margin-left: .5em;
-  margin-bottom: -2em;
+  margin-bottom: 2em;
 }
 
 header img#logo {
