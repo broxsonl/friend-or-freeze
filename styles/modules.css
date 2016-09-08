@@ -106,6 +106,12 @@ border: 2px solid yellow;
   display: none;
 }
 
+#neutral-pic {
+  width: 98%;
+  margin: 1%;
+  display: none;
+}
+
 #example-tweets {
   align-items: center;
   display: flex;
