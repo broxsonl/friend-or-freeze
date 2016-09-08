@@ -165,3 +165,11 @@ border: 2px solid yellow;
     /*left: 20%:
   }
 }*/
+
+@media only screen and (min-width: 400px) {
+
+}
+
+@media only screen and (min-width: 760px) {
+
+}
