@@ -7,8 +7,8 @@
     if (tweetObj.positives > tweetObj.negatives) {
       $('#positive-results').fadeIn();
       $('#positive-pic').fadeIn();
-    } else {
-      $('#negatives-results').fadeIn();
+    } else if (tweetObj.negatives > tweetObj.positives) {
+      $('#negative-results').fadeIn();
       $('#negative-pic').fadeIn();
     }
     $('#example-tweets').fadeIn();

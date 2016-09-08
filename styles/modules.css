@@ -21,12 +21,10 @@ header .title-name {
 }
 
 #zipentry {
-  /*box-sizing: border-box;*/
   width: 90%;
-  margin: 2%;
+  margin: 3%;
   padding: 15px 30px 15px 20px;
   border: 0;
-  /*border-radius: 4px;*/
   background: #fff;
   color: #292f33;
   text-align: center;
@@ -53,6 +51,19 @@ header .title-name {
   margin-bottom: -3px;
 }
 
+#example-tweets {
+  /*justify-content: center;*/
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#positive-results {
+  width: 90%
+}
+
+#negative-results {
+  width: 90%
+}
 
 /*CSS BELOW FOR STYLING THE RANGE INPUT*/
   input[type=range] {
