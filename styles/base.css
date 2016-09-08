@@ -29,13 +29,18 @@ h3 {
   text-align: center;
 }
 
+#tweet-chart {
+  max-width: 100%;
+}
+
+
 article {
   border: 2px solid black;
   text-align: center;
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
