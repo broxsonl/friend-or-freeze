@@ -10,9 +10,12 @@
     if (tweetObj.positives > tweetObj.negatives) {
       $('#positive-results').fadeIn(500);
       $('#positive-pic').fadeIn(500);
-    } else {
+    } else if (tweetObj.negatives > tweetObj.positives) {
       $('#negative-results').fadeIn();
       $('#negative-pic').fadeIn();
+    } else {
+      $('#neutral-results').fadeIn();
+      $('#neutral-pic').fadeIn();
     }
     $('#example-tweets').fadeIn(3000);
     tweetsView.renderTweets();
