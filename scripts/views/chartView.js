@@ -2,8 +2,8 @@
 
   var chartView = {};
 
-  var tweetChart;
-  var chartDrawn = false;
+  chartView.tweetChart;
+  chartView.chartDrawn = false;
 
   chartView.titles = ['Positive Tweets', 'Negative Tweets', 'Neutral Tweets'];
 
@@ -18,45 +18,31 @@
       {
         data: chartView.vibes,
         backgroundColor: [
-          'bisque',
-          'darkgray',
-          'burlywood',
-          'lightblue',
-          'darkseagreen'
+          'navy',
+          'red',
+          'white'
         ],
-        hoverBackgroundColor: [
-          'purple',
-          'purple',
-          'purple',
-          'purple',
-          'purple'
+        hoverBorderWidth: 7,
+        hoverBorderColor: [
+          'navy',
+          'red',
+          'white'
         ]
       }]
   };
 
   chartView.drawChart = function() {
     var ctx = document.getElementById('tweet-chart').getContext('2d');
-    tweetChart = new Chart(ctx,{
-      type: 'pie',
+    chartView.tweetChart = new Chart(ctx,{
+      type: 'doughnut',
       data: data,
       options: {
-        responsive: false,
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
+        responsive: false
       }
     });
     chartDrawn = true;
   };
 
-
-  chartView.hideChart = function() {
-    $('tweet-chart').hidden = true;
-  };
 
   module.chartView = chartView;
 

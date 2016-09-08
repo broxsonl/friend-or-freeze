@@ -17,14 +17,7 @@
       $('#neutral-results').fadeIn();
       $('#neutral-pic').fadeIn();
     }
-    $('#example-tweets').fadeIn(3000);
-    tweetsView.renderTweets();
     // usersObj.getTweetGeos();
-    chartView.drawChart();
-    tweetObj.tweetText = [];
-    tweetObj.positives = 0;
-    tweetObj.negatives = 0;
-    tweetObj.neutrals = 0;
   };
 
   module.resultsController = resultsController;
