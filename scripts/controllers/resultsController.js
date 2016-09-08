@@ -13,6 +13,10 @@
     }
     $('#example-tweets').fadeIn();
     tweetsView.renderTweets();
+    tweetObj.tweetText = [];
+    tweetObj.positives = 0;
+    tweetObj.negatives = 0;
+    tweetObj.neutrals = 0;
   };
 
   module.resultsController = resultsController;
