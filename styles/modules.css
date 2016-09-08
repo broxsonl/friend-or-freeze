@@ -27,6 +27,10 @@ header .title-name {
   font-size: 25px;
 }
 
+.title-name a:hover {
+  color: black;
+}
+
 #homepage {
   text-align: center;
 }
@@ -100,20 +104,23 @@ border: 2px solid yellow;
 }
 
 #positive-pic {
-  width: 98%;
-  margin: 1%;
+  width: 50%;
+  margin: 25%;
+  margin-top: 0;
   display: none;
 }
 
 #negative-pic {
-  width: 98%;
-  margin: 1%;
+  width: 50%;
+  margin: 25%;
+  margin-top: 0;
   display: none;
 }
 
 #neutral-pic {
-  width: 98%;
-  margin: 1%;
+  width: 50%;
+  margin: 25%;
+  margin-top: 0;
   display: none;
 }
 
