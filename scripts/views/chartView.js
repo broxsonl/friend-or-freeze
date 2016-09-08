@@ -23,9 +23,9 @@
           'white'
         ],
         hoverBackgroundColor: [
-          'purple',
-          'purple',
-          'purple'
+          'cyan',
+          'cyan',
+          'cyan'
         ]
       }]
   };
