@@ -17,7 +17,6 @@
       $('#neutral-results').fadeIn();
       $('#neutral-pic').fadeIn();
     }
-    // usersObj.getTweetGeos();
   };
 
   module.resultsController = resultsController;

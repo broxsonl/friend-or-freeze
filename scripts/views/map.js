@@ -1,5 +1,9 @@
 (function(module) {
 
+  var mapView = {};
+  mapView.allTweetsWithGeo = [];
+  mapView.allMarkers = [];
+
   var stylesArray = [
     {
       featureType: "all",
@@ -34,7 +38,7 @@
     zoomControlOptions: {
       position: google.maps.ControlPosition.RIGHT_CENTER
     }
-  }
+  };
 
   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -49,10 +53,31 @@
     map: map
   });
 
-  var marker2 = new google.maps.Marker({
-    position: {lat: 47.618200, lng: -122.351800},
-    map: map
-  });
 
-  module.map = map;
+  mapView.getTheStuff = function () {
+    mapView.allTweetsWithGeo = tweetObj.all.statuses.filter(function (tweet) {
+      console.log(tweet.geo);
+      return tweet.geo;
+    });
+  };
+
+  mapView.showTheStuff = function () {
+    mapView.allTweetsWithGeo.forEach(function (geoTweet){
+      var marker = new google.maps.Marker({
+        position: {lat: geoTweet.geo.coordinates[0], lng: geoTweet.geo.coordinates[1]},
+        map: map
+      });
+      mapView.allMarkers.push(marker);
+    });
+    console.log(mapView.allMarkers);
+
+    if (mapView.allMarkers.length >= 1) {
+      $('.map-section').fadeIn();
+      google.maps.event.trigger(map, 'resize');
+    };
+  };
+
+
+  module.mapView = mapView;
+
 })(window);

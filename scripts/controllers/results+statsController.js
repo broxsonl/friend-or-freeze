@@ -7,6 +7,8 @@
     $('.chartjs-hidden-iframe').remove();
     tweetsView.renderTweets();
     chartView.drawChart();
+    mapView.getTheStuff();
+    mapView.showTheStuff();
     tweetObj.tweetText = [];
     tweetObj.positives = 0;
     tweetObj.negatives = 0;
