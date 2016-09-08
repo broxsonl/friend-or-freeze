@@ -25,8 +25,6 @@
       };
     });
   };
-  //TODO: Need to run the below code in the controller.
-  // tweetsView.renderTweets();
 
   module.tweetsView = tweetsView;
 
