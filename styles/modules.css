@@ -34,6 +34,8 @@ header .title-name {
 
 #slider-text {
   color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
 }
 
 .footer-div a {
@@ -44,7 +46,7 @@ header .title-name {
 
 #rangevalue {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   align-self: center;
   text-align: center;

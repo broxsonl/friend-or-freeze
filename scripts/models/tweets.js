@@ -6,12 +6,10 @@
   tweetObj.positives = 0;
   tweetObj.negatives = 0;
   tweetObj.neutrals = 0;
-
   tweetObj.dictionary = $.getJSON('vendor/scripts/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
     console.log(tweetObj.dictionary = data[0]);
   });
-
 
  //our scoring function, checks the words of each tweet against our sentiment dictionary and handles our counts of neutrals, positives and negatives based on wether each tweet is positive, negative or neutral.
   tweetObj.scoreTweet = function(tweet) {
@@ -51,8 +49,6 @@
     page('/results');
   };
 
-
-
   //This creates a new array with each tweet text, then call the cleanup function
   tweetObj.tweetTextCreator = function() {
     tweetObj.all.statuses.forEach(function(tweet) {
@@ -60,7 +56,6 @@
     });
     tweetObj.cleanup();
   };
-
 
   //this is our request to the server based on the user choice of zipcode and number of tweets:
   tweetObj.fetchTweets = function() {
@@ -71,7 +66,6 @@
       tweetObj.tweetTextCreator();
     });
   };
-
 
   tweetObj.findCoordinates = function(field, field2, zip, callback) {
     webDB.execute(
@@ -89,7 +83,6 @@
         }
     );
   };
-
 
   //event handler for user input triggering our tweet analysis
   $('form').on('submit', function (event){
