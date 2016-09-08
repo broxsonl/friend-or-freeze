@@ -1,46 +1,41 @@
 'use strict';
 
 var adjustTweetNumber = function() {
+  $('#rangevalue').val()
+
   if (parseInt($('#rangeinput').val()) === 100) {
     $('#rangevalue').css({
-      'font-size': '75px',
-      'color': 'maroon'
+      'font-size': '75px'
     });
   }
-  else if (parseInt($('#rangeinput').val()) > 75) {
+  else if (parseInt($('#rangeinput').val()) > 80) {
     $('#rangevalue').css({
-      'font-size': '60px',
-      'color': 'magenta'
+      'font-size': '60px'
     });
   }
   else if (parseInt($('#rangeinput').val()) > 60) {
     $('#rangevalue').css({
-      'font-size': '50px',
-      'color': 'orange'
+      'font-size': '50px'
     });
   }
   else if (parseInt($('#rangeinput').val()) > 50) {
     $('#rangevalue').css({
-      'font-size': '40px',
-      'color': 'brown'
+      'font-size': '40px'
     });
   }
   else if (parseInt($('#rangeinput').val()) > 40) {
     $('#rangevalue').css({
-      'font-size': '30px',
-      'color': 'yellow'
+      'font-size': '30px'
     });
   }
-  else if (parseInt($('#rangeinput').val()) > 30) {
+  else if (parseInt($('#rangeinput').val()) > 25) {
     $('#rangevalue').css({
-      'font-size': '20px',
-      'color': 'yellowgreen'
+      'font-size': '25px'
     });
   }
   else if (parseInt($('#rangeinput').val()) <= 25) {
     $('#rangevalue').css({
-      'font-size': '15px',
-      'color': 'black'
+      'font-size': '20px'
     });
   }
   $('#rangevalue').text($('#rangeinput').val());

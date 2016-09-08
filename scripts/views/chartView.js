@@ -37,7 +37,7 @@
   chartView.drawChart = function() {
     var ctx = document.getElementById('tweet-chart').getContext('2d');
     tweetChart = new Chart(ctx,{
-      type: 'bar',
+      type: 'pie',
       data: data,
       options: {
         responsive: false,
