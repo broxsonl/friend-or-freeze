@@ -1,6 +1,6 @@
 'use strict';
 
-$('#about').on('click', 'a', function() {
+$('#about').on('click', 'h2', function() {
   event.preventDefault();
   $('#about').css('top', '15%');
   $('article').hide();
