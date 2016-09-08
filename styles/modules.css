@@ -21,15 +21,31 @@ header .title-name {
 }
 
 #zipentry {
-  /*box-sizing: border-box;*/
   width: 90%;
   margin: 2%;
   padding: 15px 30px 15px 20px;
   border: 0;
-  /*border-radius: 4px;*/
   background: #fff;
   color: #292f33;
   text-align: center;
+}
+
+#zipentry:focus, textarea:focus {
+  box-shadow: 0 0 20px red;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 5px solid red;
+  width: 90%;
+  margin: 2%;
+  padding: 15px 30px 15px 20px;
+  border: 0;
+  background: #fff;
+  text-align: center;
+}
+
+#rangeinput:focus {
+box-shadow: 0 0 5px yellow;
+border: 2px solid yellow;
 }
 
 #slider-text {
@@ -50,9 +66,28 @@ header .title-name {
   font-weight: bold;
   align-self: center;
   text-align: center;
-  margin-bottom: -3px;
+  margin-bottom: -10%;
 }
 
+#positive-pic {
+  width: 90%;
+  /*height: 400px;*/
+  margin: 3%;
+  display: none;
+}
+
+#negative-pic {
+  width: 90%;
+  /*height: 400px;*/
+  margin: 3%;
+  display: none;
+}
+
+#example-tweets {
+  width: 90%;
+  /*height: 400px;*/
+  margin: 3%;
+}
 
 /*CSS BELOW FOR STYLING THE RANGE INPUT*/
   input[type=range] {
