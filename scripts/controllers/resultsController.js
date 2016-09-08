@@ -3,7 +3,10 @@
 
   resultsController.reveal = function() {
     $('.page-content').hide();
+
     console.log('Positive Vibes: ' + tweetObj.positives + ' , Negative Vibes: ' + tweetObj.negatives + ' , and Neutral Vibes: ' + tweetObj.neutrals);
+    chartView.vibes.push(tweetObj.positives, tweetObj.negatives, tweetObj.neutrals);
+
     if (tweetObj.positives > tweetObj.negatives) {
       $('#positive-results').fadeIn();
       $('#positive-pic').fadeIn();
@@ -12,7 +15,7 @@
       $('#negative-pic').fadeIn();
     }
     tweetsView.renderTweets();
-    usersObj.getTweetGeos();
+    // usersObj.getTweetGeos();
     chartView.drawChart();
 
   };
