@@ -92,9 +92,6 @@ border: 2px solid yellow;
   color: white;
   font-size: 20px;
   font-weight: bold;
-  align-self: center;
-  text-align: center;
-  margin-bottom: -10%;
 }
 
 #positive-pic {
@@ -104,8 +101,8 @@ border: 2px solid yellow;
 }
 
 #negative-pic {
-  width: 90%;
-  margin: 3%;
+  width: 98%;
+  margin: 1%;
   display: none;
 }
 
