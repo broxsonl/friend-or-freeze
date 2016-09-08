@@ -48,13 +48,6 @@
 #about {
   position: relative;
   text-align: center;
-  margin-top: 7%;
-  /* left: 23%; */
-  margin-left: 10%;
-  margin-right: 10%;
-  border: 2px solid black;
-  background-color: navy;
-  /* opacity: .7; */
   color: white;
   text-decoration: none;
 }
@@ -64,6 +57,9 @@
   margin-right: 2%;
 }
 
+#about img {
+  margin-bottom: 15px;
+}
 .aboutJohn h2{
   padding-right: 2%;
   border-right: 2px solid black;
@@ -75,10 +71,9 @@
 }
 
 article {
-  position: relative;
-  text-align: center;
   margin-top: 7%;
-  left: 23%;
-  max-width: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
   border: 2px solid black;
+  background-color: navy;
 }
