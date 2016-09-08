@@ -64,6 +64,12 @@ header .title-name {
   margin: 15px;
 }
 
+.button-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
 #zipentry {
   width: 90%;
   margin: 2%;
