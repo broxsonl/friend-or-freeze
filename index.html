@@ -52,6 +52,10 @@
         <img id="negative-pic" src="assets/images/negative.jpg">
       </section>
 
+      <section id="results+stats" class="">
+        <canvas id="tweet-chart" width="800px" height="400px"></canvas>
+
+
       <section id="example-tweets" class="page-content">
 
       </section>
@@ -86,6 +90,11 @@
      <!-- </main> -->
      <div class="push"></div>
     </div>
+
+
+    <!-- <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH0Nf7xtoyhDblhPMj7k33zU_B2-vH3mY&v=3.exp&libraries=visualization"></script> -->
+
     <div class="footer-container">
       <div class="footer-div">
         <p class="links"> <a href="/">Home</a> &nbsp &nbsp| &nbsp &nbsp <a href="/about">About</a></p>
@@ -98,16 +107,22 @@
     <script src="vendor/scripts/html5sql.js"></script>
     <script src="vendor/scripts/webdb.js"></script>
     <script src="vendor/scripts/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js"></script>
     <script src="vendor/scripts/sentiment_touchstone.json"></script>
 
 <!-- models -->
     <script src="scripts/models/city.js"></script>
     <script src="scripts/models/tweets.js"></script>
+    <script src="scripts/models/users.js"></script>
+    <script src="scripts/models/sentiment_touchstone.json"></script>
+
 
 <!-- views-->
     <script src="scripts/views/indexView.js"></script>
     <script src="scripts/views/resultsTweetView.js"></script>
+    <script src="scripts/views/chartView.js"></script>
+    <script src="scripts/views/map.js"></script>
     <script src="scripts/views/aboutView.js"></script>
 
 <!-- controllers -->
