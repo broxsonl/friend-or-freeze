@@ -2,7 +2,7 @@
 
   var chartView = {};
 
-  var tweetChart;
+  chartView.tweetChart;
   chartView.chartDrawn = false;
 
   chartView.titles = ['Positive Tweets', 'Negative Tweets', 'Neutral Tweets'];
@@ -32,7 +32,7 @@
 
   chartView.drawChart = function() {
     var ctx = document.getElementById('tweet-chart').getContext('2d');
-    tweetChart = new Chart(ctx,{
+    chartView.tweetChart = new Chart(ctx,{
       type: 'doughnut',
       data: data,
       options: {
