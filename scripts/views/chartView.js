@@ -22,10 +22,11 @@
           'red',
           'white'
         ],
-        hoverBackgroundColor: [
-          'cyan',
-          'cyan',
-          'cyan'
+        hoverBorderWidth: 7,
+        hoverBorderColor: [
+          'navy',
+          'red',
+          'white'
         ]
       }]
   };
