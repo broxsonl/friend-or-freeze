@@ -1,7 +1,6 @@
 (function(module) {
 
   var chartView = {};
-
   var tweetChart;
   var chartDrawn = false;
 

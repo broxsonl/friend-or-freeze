@@ -22,9 +22,7 @@
   };
 
 
-  // var geoArray = tweetObj.all.statuses.filter(function (tweet){
-  //  return tweet.geo
-  // });
+
 
  // https://api.twitter.com/1.1/followers/ids.json?cursor=-1&screen_name=andypiper&count=5000
 
