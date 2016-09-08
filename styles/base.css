@@ -1,3 +1,8 @@
+/*font-family: 'Titillium Web', sans-serif;
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Marcellus SC', serif;
+font-family: 'Quicksand', sans-serif;*/
+
 html {
   height: 100%;
 }
@@ -5,68 +10,28 @@ html {
 body {
   background: linear-gradient(to right, #8B9DE4, #004CBF);
   height: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 
-header {
-  display: flex;
-  margin-top: 3em;
-  margin-left: 3em;
+h2 {
+  font-family: 'Quicksand', sans-serif;
 }
 
-header img#logo {
-  border-radius: 100%;
-  height: 60px;
-  width: 60px;
-  background: linear-gradient(to bottom right, yellow, #61EFFF);
+h3 {
+  margin-top: 2%;
 }
 
-header .title-name {
-  margin-left: 15px;
+#about {
+  text-align: center;
 }
 
-label {
-  display: flex;
-  justify-content: center;
+article {
+  border: 2px solid black;
+  text-align: center;
 }
 
-
-
-
-
-/*CSS BELOW FOR STYLING THE RANGE INPUT*/
-  input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: 1px solid #000000;
-    height: 36px;
-    width: 16px;
-    border-radius: 3px;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
-  }
-
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(to right, orange);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-  }
-
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, orange);
-  }
+a {
+  color: black;
+  text-decoration: none;
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Marcellus+SC|Quicksand|Titillium+Web" rel="stylesheet">
 
     <!--TWEET TEMPLATE FOR RESULTS PAGE-->
     <script id="tweet-template" type="text/x-handlebars-template">
@@ -19,49 +20,51 @@
 
   <body>
     <div class="wrapper">
-     <header>
-      <img id="logo" src="assets/images/logo.png">
-      <h1 class="title-name">
-        <span id="friend">Friend</span> or <span id="freeze">Freeze</span>
-      </h1>
+      <header>
+        <a href="/"><img id="logo" src="assets/images/logo.png"></a>
+        <h1 class="title-name">
+          <span id="friend">Friend</span> or <span id="freeze">Freeze</span>
+        </h1>
+      </header>
 
-      <nav class="main-nav">
-      </nav>
-    </header>
-
-     <main class="clearfix">
+     <!-- <main class="clearfix"> -->
       <section id="homepage" class="page-content">
-          <form>
-            <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code!" maxlength="5" size="50" required>
+        <h1>How friendly is your area today?</h1>
+        <br>
 
+          <form>
             <div id="slider-div">
-              <input id="rangeinput" type="range" min="5" max="100" value="25" onchange="rangevalue.value=value"><output id="rangevalue">25</output>
-              <label for="tweet-amount-slider">Number of Tweets</label>
+              <label id="slider-text" for="tweet-amount-slider">How many tweets would you like to sample?</label>
+                <output id="rangevalue">25</output>
+                <br><br>
+              <input id="rangeinput" type="range" min="5" max="100" value="25">
             </div>
+            <br>
+              <input id="zipentry" type="text" name="zipcode" placeholder="Please enter your Zip Code" maxlength="5" size="50" required>
           </form>
       </section>
 
       <section id="positive-results" class="page-content">
-        <img id="positive-pic" src="assets/images/positive.png" height="800px" width="800px">
+        <img id="positive-pic" src="assets/images/positive.jpg">
       </section>
 
       <section id="negative-results" class="page-content">
-        <img id="negative-pic" src="assets/images/negative.jpg" height="800px" width="800px">
+        <img id="negative-pic" src="assets/images/negative.jpg">
       </section>
 
       <section id="results+stats" class="">
         <canvas id="tweet-chart" width="800px" height="400px"></canvas>
 
-        <div id="example-tweets">
-        </div>
+
+      <section id="example-tweets" class="page-content">
 
       </section>
 
       <section id="about" class="page-content">
 
-        <h2 class="aboutJohn">John</h2>
-        <h2 class="aboutLee">Lee</h2>
-        <h2 class="aboutMaelle">Maelle</h2>
+        <a href="#john" class="aboutJohn"><h2  class="aboutJohn">John</h2></a>
+        <a href="#lee" class="aboutLee"><h2 class="aboutLee">Lee</h2></a>
+        <a href="#maelle" class="aboutMaelle"><h2  class="aboutMaelle">Maelle</h2></a>
 
         <article class="aboutLee">
           <h3>Lee Broxson</h3>
@@ -78,13 +81,13 @@
         </article>
 
         <article class="aboutMaelle">
-          <img class="devPic" src="http://placehold.it/80x80">
           <h3>Maelle Vance</h3>
+          <img class="devPic" src="http://placehold.it/80x80">
           <p>Mom-in-Chief, Maelle often describes this occupation as "feral cats herder".</p>
           <p>You can find her latest non-diaper related code on her <a href="http://github.com/ellezv" target="_blank">GitHub</a></p>
         </article>
       </section>
-     </main>
+     <!-- </main> -->
      <div class="push"></div>
     </div>
 
@@ -94,7 +97,7 @@
 
     <div class="footer-container">
       <div class="footer-div">
-        <p class="links"> About &nbsp &nbsp| &nbsp &nbsp Home </p>
+        <p class="links"> <a href="/">Home</a> &nbsp &nbsp| &nbsp &nbsp <a href="/about">About</a></p>
       </div>
     </div>
 
@@ -120,6 +123,7 @@
     <script src="scripts/views/resultsTweetView.js"></script>
     <script src="scripts/views/chartView.js"></script>
     <script src="scripts/views/map.js"></script>
+    <script src="scripts/views/aboutView.js"></script>
 
 <!-- controllers -->
     <script src="scripts/controllers/aboutController.js"></script>

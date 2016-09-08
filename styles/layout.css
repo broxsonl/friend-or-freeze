@@ -1,9 +1,9 @@
-.wrapper {
-  position: relative;
-  min-height: 92%;
+/*.wrapper {*/
+  /*position: relative;*/
+  /*min-height: 92%;
   height: auto !important;
-  margin: 0 auto -50px;
-}
+  margin: 0 auto -50px;*/
+/*}*/
 
 #positive-pic {
   display:none;
@@ -14,29 +14,21 @@
 }
 
 #rangeinput {
-  display: block;
+  display: inline-block;
   margin-top: 2em;
 }
 
 #homepage {
-  display: flex;
   justify-content: center;
-  margin-top: 8em;
 }
 
 #slider-div {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  border: 0;
+  text-align: center;
 }
 
-/*.push {
-  height: 50px;
-}*/
-
 .footer-container {
-  /*position: absolute;
-  bottom: 0;*/
   position: relative;
   margin: 0 auto;
   height: 50px;
@@ -50,4 +42,36 @@
   justify-content: center;
   margin-top: 0;
   color: white;
+}
+
+#about {
+  position: absolute;
+  top: 40%;
+  margin-bottom: 25%;
+  width: 100%;
+}
+
+
+#about h2 {
+  display: inline;
+  margin-right: 2%;
+}
+
+.aboutJohn h2{
+  padding-right: 2%;
+  border-right: 2px solid black;
+}
+
+.aboutLee h2{
+  padding-right: 2%;
+  border-right: 2px solid black;
+}
+
+article {
+  position: relative;
+  text-align: center;
+  margin-top: 7%;
+  left: 23%;
+  max-width: 50%;
+  border: 2px solid black;
 }

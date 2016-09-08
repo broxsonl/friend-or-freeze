@@ -3,3 +3,131 @@
   padding: 25% 0;
   border: 10px solid green;
 }
+
+header {
+  display: flex;
+  margin-top: .75em;
+  margin-left: .5em;
+  margin-bottom: 2em;
+}
+
+header img#logo {
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+}
+
+header .title-name {
+  margin-left: .3em;
+  font-size: 25px;
+}
+
+#homepage h1 {
+  text-align: center;
+}
+
+#zipentry {
+  width: 90%;
+  margin: 2%;
+  border: 0;
+  background: #fff;
+  color: #292f33;
+  text-align: center;
+}
+
+#zipentry:focus {
+  box-shadow: 0 0 20px red;
+  border: 5px solid red;
+  border: 0;
+  background: #fff;
+  text-align: center;
+}
+
+#rangeinput:focus {
+box-shadow: 0 0 5px yellow;
+border: 2px solid yellow;
+}
+
+#slider-text {
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+}
+
+.footer-div a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+#rangevalue {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
+  margin-bottom: -10%;
+}
+
+#positive-pic {
+  width: 90%;
+  margin: 3%;
+  display: none;
+}
+
+#negative-pic {
+  width: 90%;
+  margin: 3%;
+  display: none;
+}
+
+#example-tweets {
+  width: 90%;
+  margin: 3%;
+}
+
+/*CSS BELOW FOR STYLING THE RANGE INPUT*/
+  input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 45%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    align-self: center;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(to right, orange);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, orange);
+  }
+
+/*media queries:*/
+/*@media only screen and (min-width: 500px) {
+  #about {
+    right: 15%;*/
+    /*left: 20%:*/
+  /*}
+}*/

@@ -4,11 +4,11 @@
   tweetsView.tweetCompiler = function(thisTweet) {
     var source = $('#tweet-template').html();
     var templateRender = Handlebars.compile(source);
-    // console.log(templateRender(thisTweet));
     return templateRender(thisTweet);
   };
 
   tweetsView.renderTweets = function() {
+    $('#example-tweets').empty();
     for (var i = 0; i < 5; i++) {
       tweet = tweetsView.createEmbeddedTweets()[i];
       $('#example-tweets').append(tweetsView.tweetCompiler(tweet));
