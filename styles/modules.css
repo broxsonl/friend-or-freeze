@@ -72,6 +72,9 @@ header .title-name {
   justify-content: center;
   margin-top: 2em;
 }
+.button-div input {
+  color: white;
+}
 
 #zipentry {
   width: 90%;
@@ -121,6 +124,7 @@ border: 2px solid yellow;
   margin: 25%;
   margin-top: 0;
   display: none;
+  margin-bottom: 0;
 }
 
 #neutral-pic {
@@ -128,6 +132,7 @@ border: 2px solid yellow;
   margin: 25%;
   margin-top: 0;
   display: none;
+  margin-bottom: 0;
 }
 
 #example-tweets {
