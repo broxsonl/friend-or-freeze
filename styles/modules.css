@@ -113,6 +113,7 @@ border: 2px solid yellow;
   margin: 25%;
   margin-top: 0;
   display: none;
+  margin-bottom: 0;
 }
 
 #negative-pic {
@@ -213,6 +214,9 @@ border: 2px solid yellow;
 
   #homepage h2 {
     font-size:28px;
+  }
+  .button-div {
+    /*margin-top: -100px;*/
   }
 
 }
