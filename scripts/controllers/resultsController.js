@@ -1,9 +1,10 @@
 (function(module) {
+
   var resultsController = {};
 
   resultsController.reveal = function() {
     $('.page-content').hide();
-
+    //Keeping this log in so that this is visible in the console on purpose.
     console.log('Positive Vibes: ' + tweetObj.positives + ' , Negative Vibes: ' + tweetObj.negatives + ' , and Neutral Vibes: ' + tweetObj.neutrals);
     chartView.vibes.push(tweetObj.positives, tweetObj.negatives, tweetObj.neutrals);
 
