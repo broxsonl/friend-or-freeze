@@ -36,7 +36,13 @@
       type: 'doughnut',
       data: data,
       options: {
-        responsive: false
+        responsive: false,
+        legend: {
+          display: true,
+          labels: {
+            fontColor: '#fff'
+          }
+        }
       }
     });
     chartDrawn = true;
