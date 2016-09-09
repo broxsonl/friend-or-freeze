@@ -56,7 +56,6 @@
 
   mapView.getTheStuff = function () {
     mapView.allTweetsWithGeo = tweetObj.all.statuses.filter(function (tweet) {
-      console.log(tweet.geo);
       return tweet.geo;
     });
   };
@@ -69,7 +68,6 @@
       });
       mapView.allMarkers.push(marker);
     });
-    console.log(mapView.allMarkers);
 
     if (mapView.allMarkers.length >= 1) {
       $('.map-section').fadeIn();
