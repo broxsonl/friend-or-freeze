@@ -25,7 +25,6 @@
     City.fetchCities();
   };
 
-
   //insert record in cities table for each City
   City.prototype.insertRecord = function() {
     webDB.execute(
@@ -44,7 +43,6 @@
       'SELECT * FROM cities',
     function(rows) {
       if (rows.length) {
-        console.log('already there');
       }else {
         $.getJSON('/data/cities.json', function(rawData) {
           rawData.forEach(function(item) {

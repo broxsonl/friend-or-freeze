@@ -6,25 +6,25 @@
 
   var stylesArray = [
     {
-      featureType: "all",
+      featureType: 'all',
       stylers: [
-        { hue: "#00ffe6" },
+        { hue: '#00ffe6' },
         { saturation: -20 }
       ]
     },
     {
-      featureType: "road",
-      elementType: "geometry",
+      featureType: 'road',
+      elementType: 'geometry',
       stylers: [
         { lightness: 100 },
-        { visibility: "simplified" }
+        { visibility: 'simplified' }
       ]
     },
     {
-      featureType: "road",
-      elementType: "labels",
+      featureType: 'road',
+      elementType: 'labels',
       stylers: [
-        { visibility: "off" }
+        { visibility: 'off' }
       ]
     }
   ];
@@ -76,7 +76,6 @@
       google.maps.event.trigger(map, 'resize');
     };
   };
-
 
   module.mapView = mapView;
 

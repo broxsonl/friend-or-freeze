@@ -27,6 +27,10 @@ header .title-name {
   font-size: 25px;
 }
 
+.title-name a:hover {
+  color: black;
+}
+
 #homepage {
   text-align: center;
 }
@@ -36,7 +40,6 @@ header .title-name {
   font-size: 33px;
   font-weight: bold;
   color: white;
-  /*text-decoration: underline;*/
 }
 
 #homepage h2 {
@@ -106,20 +109,23 @@ border: 2px solid yellow;
 }
 
 #positive-pic {
-  width: 98%;
-  margin: 1%;
+  width: 50%;
+  margin: 25%;
+  margin-top: 0;
   display: none;
 }
 
 #negative-pic {
-  width: 98%;
-  margin: 1%;
+  width: 50%;
+  margin: 25%;
+  margin-top: 0;
   display: none;
 }
 
 #neutral-pic {
-  width: 98%;
-  margin: 1%;
+  width: 50%;
+  margin: 25%;
+  margin-top: 0;
   display: none;
 }
 
@@ -149,9 +155,9 @@ border: 2px solid yellow;
 
 /*CSS BELOW FOR STYLING THE RANGE INPUT*/
   input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 45%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
+    -webkit-appearance: none;
+    width: 45%;
+    background: transparent;
     align-self: center;
   }
 
@@ -167,8 +173,8 @@ border: 2px solid yellow;
     border-radius: 3px;
     background: #ffffff;
     cursor: pointer;
-    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+    margin-top: -14px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   }
 
   input[type=range]::-webkit-slider-runnable-track {
@@ -184,14 +190,6 @@ border: 2px solid yellow;
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: linear-gradient(to right, orange);
   }
-
-/*media queries:*/
-/*@media only screen and (min-width: 500px) {
-  #about {
-    right: 15%;*/
-    /*left: 20%:
-  }
-}*/
 
 @media only screen and (min-width: 400px) {
   #zipentry {

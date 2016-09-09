@@ -21,14 +21,14 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="/"><img id="logo" src="assets/images/logo.png"></a>
+        <a href="/"><img id="logo" src="assets/images/logo.png">
         <h1 class="title-name">
-          <span id="friend">Friend</span> or <span id="freeze">Freeze</span>
+          <span id="friend">Friend</span> or <span id="freeze">Freeze</span></a>
         </h1>
       </header>
 
       <section id="homepage" class="page-content">
-        <h1>What's it like today?</h1>
+        <h1>How's Everyone Feeling?</h1>
         <h2>Find the mood of the people in your area!</h2>
         <br>
         <div id="images">
@@ -72,6 +72,13 @@
 
       <section id="neutral-results" class="page-content">
         <img id="neutral-pic" src="assets/images/neutral.jpg">
+        <div class="button-div">
+          <a href="/results+stats">
+            <form>
+              <input type="button" value="All the Ramen">
+            </form>
+          </a>
+        </div>
       </section>
 
       <section id="resultsStats" class="page-content">
@@ -127,14 +134,12 @@
     <script src="vendor/scripts/html5sql.js"></script>
     <script src="vendor/scripts/webdb.js"></script>
     <script src="vendor/scripts/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js"></script>
     <script src="vendor/scripts/sentiment_touchstone.json"></script>
 
 <!-- models -->
     <script src="scripts/models/city.js"></script>
     <script src="scripts/models/tweets.js"></script>
-    <script src="scripts/models/users.js"></script>
 
 
 <!-- views-->

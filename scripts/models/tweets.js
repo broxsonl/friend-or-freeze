@@ -8,7 +8,6 @@
   tweetObj.neutrals = 0;
   tweetObj.dictionary = $.getJSON('vendor/scripts/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
-    console.log(tweetObj.dictionary = data[0]);
   });
 
  //our scoring function, checks the words of each tweet against our sentiment dictionary and handles our counts of neutrals, positives and negatives based on wether each tweet is positive, negative or neutral.
@@ -71,7 +70,6 @@
     webDB.execute(
       'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
         function(result) {
-          console.log(result);
           if (result[0]) {
             tweetObj[field] = result[0][field];
             tweetObj[field2] = result[0][field2];

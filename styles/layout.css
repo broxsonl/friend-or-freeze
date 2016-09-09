@@ -46,10 +46,17 @@
 }
 
 #about {
+<<<<<<< HEAD
+  top: 40%;
+  margin-bottom: 15%;
+  margin-top: 15%;
+  width: 100%;
+=======
   position: relative;
   text-align: center;
   color: white;
   text-decoration: none;
+>>>>>>> 36048551648cd12bf8ee61fff7e1f2a02a8850be
 }
 
 #about h2 {
