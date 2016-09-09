@@ -5,6 +5,7 @@
     $('.page-content').hide();
     $('#resultsStats').show(2000);
     $('#example-tweets').show(2000);
+    $('.map-section').show();
     $('.chartjs-hidden-iframe').remove();
     tweetsView.renderTweets();
     chartView.drawChart();
