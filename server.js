@@ -16,19 +16,8 @@ var proxyTwitter = function(request, response) {
   }))(request, response);
 };
 
-var proxyTwitterFollowers = function(request, response) {
-  console.log(bearerToken);
-  (requestProxy({
-    url: 'https://api.twitter.com/1.1/followers/' + request.params[0],
-    json: true,
-    headers: {
-      'Authorization': 'Bearer ' + bearerToken
-    }
-  }))(request, response);
-};
 
 app.get('/search/*', proxyTwitter);
-app.get('/followers/*', proxyTwitterFollowers);
 
 
 app.use(express.static('./'));

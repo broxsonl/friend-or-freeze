@@ -7,8 +7,6 @@
     }, this);
   }
 
-  City.allCities = []; //empty array with all our City objects
-
   //setting up websql table for our cities
   City.createTable = function() {
     webDB.execute(

@@ -24,7 +24,7 @@
     try {
       if (openDatabase) {
         _config(isVerbose);
-        html5sql.openDatabase('friendOrFreezeDB', 'Friend or Freeze Database', 5*1024*1024);
+        html5sql.openDatabase('friendOrFreezeDB', 'Friend or Freeze Database', 5*1024*1024); //opening our own DB
       } else {
         console.log('Web Databases not supported.');
       }

@@ -66,11 +66,12 @@
     });
   };
 
+  //Finding the coordinates in webSQL for the input zip
   tweetObj.findCoordinates = function(field, field2, zip, callback) {
     webDB.execute(
       'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
         function(result) {
-          if (result[0]) {
+          if (result[0]) { //if there is a result, i.e if the zip is in the database:
             tweetObj[field] = result[0][field];
             tweetObj[field2] = result[0][field2];
             callback();
