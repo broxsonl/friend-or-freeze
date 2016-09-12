@@ -1,7 +1,7 @@
 'use strict';
 //Code below to increment the number value the slider represents
 var adjustTweetNumber = function() {
-  $('#rangevalue').val()
+  $('#rangevalue').val();
 
   if (parseInt($('#rangeinput').val()) === 100) {
     $('#rangevalue').css({
