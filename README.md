@@ -1,5 +1,5 @@
 # friend-or-freeze
-Codefellows 301 Final Project
+Regional Twitter Sentiment Analyzer
 by Lee Broxson, John Shaff, and Maelle Vance
 
 Project deployed at: https://friend-or-freeze.herokuapp.com/
