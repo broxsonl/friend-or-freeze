@@ -82,6 +82,10 @@ var tweetObj = {};
         tweetObj[field2] = tweetObj.cities[i][field2];
         callback();
       }
+      else {
+        console.error('That is not a valid zip code');
+        break;
+      }
     }
   };
 
