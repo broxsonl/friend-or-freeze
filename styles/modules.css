@@ -112,16 +112,18 @@ border: 2px solid yellow;
 }
 
 #positive-pic {
-  width: 50%;
-  margin: 25%;
+  width: 20%;
+  justify-content: center;
+  margin: 40%;
   margin-top: 0;
   display: none;
   margin-bottom: 0;
 }
 
 #negative-pic {
-  width: 50%;
-  margin: 25%;
+  width: 20%;
+  justify-content: center;
+  margin: 40%;
   margin-top: 0;
   display: none;
   margin-bottom: 0;
