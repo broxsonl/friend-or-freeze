@@ -1,6 +1,7 @@
 # friend-or-freeze
 Codefellows 301 Final Project
 by Lee Broxson, John Shaff, and Maelle Vance
+
 Project deployed at: https://friend-or-freeze.herokuapp.com/
 
 # Acknowledgements
