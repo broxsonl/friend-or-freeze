@@ -77,14 +77,9 @@ var tweetObj = {};
   tweetObj.findCoordinates = function(field, field2, zip, callback) {
     for (let i = 0; i < tweetObj.cities.length; i++) {
       if (tweetObj.cities[i].zip === parseInt(zip)) {
-        console.log(zip, 'ZIP');
         tweetObj[field] = tweetObj.cities[i][field];
         tweetObj[field2] = tweetObj.cities[i][field2];
         callback();
-      }
-      else {
-        console.error('That is not a valid zip code');
-        break;
       }
     }
   };
