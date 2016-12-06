@@ -12,6 +12,9 @@ var tweetObj = {};
   tweetObj.dictionary = $.getJSON('vendor/scripts/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
   });
+  tweetObj.cities = $.getJSON('../../data/cities.json', function(data) {
+    tweetObj.cities = data;
+  });
 
  //our scoring function, checks the words of each tweet against our sentiment dictionary and handles our counts of neutrals, positives and negatives based on wether each tweet is positive, negative or neutral.
   tweetObj.scoreTweet = function(tweet) {
@@ -60,33 +63,26 @@ var tweetObj = {};
   };
 
   //tweetObj is our request to the server based on the user choice of zipcode and number of tweets:
-  tweetObj.fetchTweets = function() {
+  tweetObj.fetchTweets = () => {
     $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + tweetObj.numOfTweets)
-    .done(function(data, message, xhr) {
+    .done((data, message, xhr) => {
       tweetObj.all = data;
-    }).done(function() {
+    }).done( () => {
       tweetObj.tweetTextCreator();
     });
   };
 
   //Finding the coordinates in webSQL for the input zip
+
   tweetObj.findCoordinates = function(field, field2, zip, callback) {
-
-    // if ()
-
-    webDB.execute(
-      'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
-        function(result) {
-          if (result[0]) { //if there is a result, i.e if the zip is in the database:
-            tweetObj[field] = result[0][field];
-            tweetObj[field2] = result[0][field2];
-            callback();
-          } else {
-            alert('Sorry, tweetObj zipcode is not valid');
-            return $('#zipentry').val('');
-          }
-        }
-    );
+    for (let i = 0; i < tweetObj.cities.length; i++) {
+      if (tweetObj.cities[i].zip === parseInt(zip)) {
+        console.log(zip, 'ZIP');
+        tweetObj[field] = tweetObj.cities[i][field];
+        tweetObj[field2] = tweetObj.cities[i][field2];
+        callback();
+      }
+    }
   };
 
   //event handler for user input triggering our tweet analysis
