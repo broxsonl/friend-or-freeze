@@ -1,6 +1,9 @@
+'use strict';
+
+var tweetObj = {};
+
 (function(module) {
 
-  var tweetObj = {};
   tweetObj.all = [];
   tweetObj.tweetText = [];
   tweetObj.positives = 0;
@@ -32,7 +35,7 @@
     };
   };
 
-  //our cleanup function, for each tweet in our array of tweets(strings) will put everything to lower case, remove characters we don't need and split strings in individual words. We then filter it so we have only words with more than two letters.
+  // our cleanup function, for each tweet in our array of tweets(strings) will put everything to lower case, remove characters we don't need and split strings in individual words. We then filter it so we have only words with more than two letters.
   //then we call our scoring function (above) on each tweet.
   tweetObj.cleanup = function(tweet) {
     tweetObj.tweetText.forEach(function(tweet){
@@ -48,7 +51,7 @@
     page('/results');
   };
 
-  //This creates a new array with each tweet text, then call the cleanup function
+  //tweetObj creates a new array with each tweet text, then call the cleanup function
   tweetObj.tweetTextCreator = function() {
     tweetObj.all.statuses.forEach(function(tweet) {
       return tweetObj.tweetText.push(tweet.text);
@@ -56,7 +59,7 @@
     tweetObj.cleanup();
   };
 
-  //this is our request to the server based on the user choice of zipcode and number of tweets:
+  //tweetObj is our request to the server based on the user choice of zipcode and number of tweets:
   tweetObj.fetchTweets = function() {
     $.get('/search/tweets.json?q=&geocode=' + tweetObj.lat + ',' + tweetObj.lng + ',5mi&lang=en&count=' + tweetObj.numOfTweets)
     .done(function(data, message, xhr) {
@@ -68,6 +71,9 @@
 
   //Finding the coordinates in webSQL for the input zip
   tweetObj.findCoordinates = function(field, field2, zip, callback) {
+
+    // if ()
+
     webDB.execute(
       'SELECT ' + field + ', ' + field2 + ' FROM cities WHERE zip =' + zip,
         function(result) {
@@ -76,7 +82,7 @@
             tweetObj[field2] = result[0][field2];
             callback();
           } else {
-            alert('Sorry, this zipcode is not valid');
+            alert('Sorry, tweetObj zipcode is not valid');
             return $('#zipentry').val('');
           }
         }
@@ -90,7 +96,5 @@
     tweetObj.zip = $('#zipentry').val();
     tweetObj.findCoordinates('lat', 'lng', tweetObj.zip, tweetObj.fetchTweets);
   });
-
-  module.tweetObj = tweetObj;
 
 })(window);
