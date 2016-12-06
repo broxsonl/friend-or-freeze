@@ -86,8 +86,8 @@ header .title-name {
 }
 
 #zipentry:focus {
-  box-shadow: 0 0 20px red;
-  border: 5px solid red;
+  box-shadow: 0 0 20px green;
+  border: 5px solid green;
   border: 0;
   background: #fff;
   text-align: center;
@@ -107,7 +107,7 @@ border: 2px solid yellow;
 
 #rangevalue {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -157,6 +157,12 @@ border: 2px solid yellow;
   text-align: center;
   font-size: 11px;
   color: white;
+}
+
+.submit-button {
+  color: black;
+  font-weight: bold;
+  background-color: lightgrey;
 }
 
 /*CSS BELOW FOR STYLING THE RANGE INPUT*/
