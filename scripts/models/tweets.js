@@ -12,7 +12,7 @@ var tweetObj = {};
   tweetObj.dictionary = $.getJSON('vendor/scripts/sentiment_touchstone.json', function(data) {
     tweetObj.dictionary = data[0];
   });
-  tweetObj.cities = $.getJSON('../../data/cities.json', function(data) {
+  tweetObj.cities = $.getJSON('../../data/cities.json', (data) => {
     tweetObj.cities = data;
   });
 
